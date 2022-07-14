@@ -2,36 +2,37 @@ package reto3;
 
 public class Preferencial extends Asistente {
 
-    //ESPACIO PARA INDICAR LOS ATRIBUTOS DE LA CLASE
-    boolean participasorteo;
-    //Y SU MÉTODO CONSTRUCTOR
-    
-    public Preferencial(String id, String nombre, String direccion) {
-        this.idTiquete=id;
-        this.nombreCompleto=nombre;
-        this.direccionResidencia=direccion;
-        this.participasorteo = false;
+    // ESPACIO PARA INDICAR LOS ATRIBUTOS DE LA CLASE
+
+    boolean participaSorteo;
+
+    // Y SU MÉTODO CONSTRUCTOR
+    public Preferencial(String idTiquete, String nombreCompleto, String direccionResidencia) {
+        super(idTiquete, nombreCompleto, direccionResidencia);
+        this.participaSorteo = false;
+
     }
-    
+
     public void participarSorteo() {
 
-        //ESPACIO PARA ESCRIBIR LA LÓGICA DEL MÉTODO
-        //participarSorteo()
-        if (this.isParticipaSorteo()) {
-            this.setParticipaSorteo(false);
+        // ESPACIO PARA ESCRIBIR LA LÓGICA DEL MÉTODO
+        // participarSorteo()
+        if (isParticipaSorteo()) {
+            setParticipaSorteo(false);;
         } else {
-            this.setParticipaSorteo(true);
+            setParticipaSorteo(true);
         }
+
     }
 
-    //ESPACIO PARA INDICAR LOS MÉTODOS GETTER Y
-    //SETTER DEL CASO
+    // ESPACIO PARA INDICAR LOS MÉTODOS GETTER Y
+    // SETTER DEL CASO
     public boolean isParticipaSorteo() {
-        return participasorteo;
+        return participaSorteo;
     }
-    
-    public void setParticipaSorteo(boolean participasorteo) {
-        this.participasorteo = participasorteo;
+
+    public void setParticipaSorteo(boolean participaSorteo) {
+        this.participaSorteo = participaSorteo;
     }
-    
+
 }

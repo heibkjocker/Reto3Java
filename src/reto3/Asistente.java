@@ -1,5 +1,4 @@
 package reto3;
-
 //NO ELIMINAR ESTA IMPORTACIÓN. SE REQUIERE
 //PARA LA EJECUCIÓN DEL MÉTODO generarCredenciales()
 import java.util.Random;
@@ -8,19 +7,18 @@ import java.util.Random;
 public class Asistente {
     
     //ESPACIO PARA INDICAR LOS ATRIBUTOS DE LA CLASE
-    //Y SU MÉTODO CONSTRUCTOR
     String idTiquete;
     String nombreCompleto;
     String direccionResidencia;
     String credenciales;
-    
-    public Asistente(String id, String nombre, String direccion){
-        this.idTiquete=id;
-        this.nombreCompleto=nombre;
-        this.direccionResidencia=direccion;
-        this.credenciales=credenciales;
+    //Y SU MÉTODO CONSTRUCTOR
+    public Asistente(String idTiquete, String nombreCompleto, String direccionResidencia){
+        this.idTiquete=idTiquete;
+        this.nombreCompleto=nombreCompleto;
+        this.direccionResidencia=direccionResidencia;
+        this.credenciales="";
     }
-    
+
     //NO DEBE PREOCUPARSE POR LA ESCRITURA DEL
     //MÉTODO A CONTINUACIÓN. ESTE REQUIERE DE LA 
     //IMPORTACIÓN DE LA LIBRERÍA Random PARA SU 
@@ -33,7 +31,7 @@ public class Asistente {
             credenciales = credencial;
         }
     }
-    
+
     //ESPACIO PARA INDICAR LOS MÉTODOS GETTER Y
     //SETTER DEL CASO
 
@@ -69,4 +67,8 @@ public class Asistente {
         this.credenciales = credenciales;
     }
     
+
+
+    
+
  }

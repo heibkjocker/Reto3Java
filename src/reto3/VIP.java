@@ -5,47 +5,48 @@ package reto3;
 //generarCredencialesPrevia()
 import java.util.Random;
 
-public class VIP extends Asistente {
 
+
+public class VIP extends Asistente{
+    
     //ESPACIO PARA INDICAR LOS ATRIBUTOS DE LA CLASE
-    boolean[] pantallas;
-    String credencialesPrevia;
-
+    boolean [] pantallas;
+    String credencialesPrevia; 
     //Y SU MÉTODO CONSTRUCTOR
-    public VIP(String id, String nombre, String direccion) {
-        this.idTiquete=id;
-        this.nombreCompleto=nombre;
-        this.direccionResidencia=direccion;
-        pantallas = new boolean[]{false, false, false};
+    /**
+     * 
+     */
+    public VIP(String idTiquete, String nombreCompleto, String direccionResidencia){
+        super(idTiquete, nombreCompleto, direccionResidencia);
+        this.credencialesPrevia = "";
+        pantallas = new boolean[3];
     }
-
+    
     //NO DEBE PREOCUPARSE POR LA ESCRITURA DEL
     //MÉTODO A CONTINUACIÓN. ESTE REQUIERE DE LA 
     //IMPORTACIÓN DE LA LIBRERÍA Random PARA SU 
     //FUNCIONAMIENTO
     public void generarCredencialesPrevia() {
-        if (credencialesPrevia.isEmpty()) {
+        if(credencialesPrevia.isEmpty()){
             Random numero = new Random();
             int x = numero.nextInt(100000);
             String credencialPrevia = String.valueOf(x);
             credencialesPrevia = credencialPrevia;
         }
     }
-
-    public void asignarPantalla(int pantalla) {
-
+    
+    public void asignarPantalla(int pantalla){
+        
         //ESPACIO PARA ESCRIBIR LA LÓGICA DEL MÉTODO
         //asignarPantalla()
-        if(pantalla < 0 && pantalla < 4){
-            if(this.pantallas[pantalla]){
-                pantallas[pantalla] = false;
-                this.setPantallas(pantallas);
-            } else {
-                pantallas[pantalla] = true;
-                this.setPantallas(pantallas);
+        if(pantalla >=1 && pantalla <=3){
+            if(pantallas[pantalla-1]){
+                pantallas[pantalla-1] = false;
+            }
+            else{
+                pantallas[pantalla-1] = true;
             }
         }
-        
         
     }
 
@@ -66,5 +67,6 @@ public class VIP extends Asistente {
     public void setCredencialesPrevia(String credencialesPrevia) {
         this.credencialesPrevia = credencialesPrevia;
     }
-
+    
 }
+
